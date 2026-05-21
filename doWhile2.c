@@ -1,15 +1,17 @@
 #include <stdio.h>
 
-int main(){
+int main() {
     int par;
 
-    printf("Digite um número par: \n");
+    printf("Digite um número par: ");
     scanf("%i", &par);
 
-    do
-    {
-        printf("O número %i não é par! Tente novamente\n", par);
+    while (par % 2 != 0) {
+        printf("O número %i não é par! Tente novamente: ", par);
         scanf("%i", &par);
-    } while (par % 2 != 0);
+    }
+
+    printf("Número válido: %i\n", par);
+
     return 0;
 }
